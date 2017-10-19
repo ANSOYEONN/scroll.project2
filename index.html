@@ -1,0 +1,164 @@
+<idoctype html>
+<head>
+	<meta charset = "utf-8">
+	<link href='normalize.css' rel="stylesheet">
+	<!-- <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'> -->
+	<style>
+		html { font-family: 'Spoqa Han Sans'; font-weight: 200;}
+		.section{height:600px;width:100%;position: relative}
+		img{margin-left: 550px; transition: center;padding-top: 200px;}
+		header{height:400px; background: black;width:100%; transition: all 0.9s}
+		header #logo{width:200px;text-align: center;height:44px;line-height: 44px;font-size: 1.5em;font-weight: 700;position:relative;left:calc(50% - 100px);transition: all 0.3s;color:white}
+		header #menu{width:700px;height:100px;position:relative;left:calc(50% - 350px);top:80px;transition: all 0.5s;padding-left: 20px;}
+		header li{width:50px;height:50px;color:black;background: black;float:left;border-radius: 2px;text-align: center;line-height: 50px;color:white;font-size: 1.6em;font-weight: 500;margin-left: 30px;margin-right:20px; list-style: none; }
+		h1{color:white;font-size: 3em;text-align: center;padding-top:280px; line-height: 1.1;padding-left: 100px;padding-right: 100px;letter-spacing: -1px;}
+		h2{color:black;font-size: 3em;text-align: center;}
+		#sectionA{ background: hotpink; transition: all 1s; }
+		#sectionB{ background: purple; transition: all 1s; }
+		#sectionC{ background: url('./img-0.png'); background-image:100%;}
+		#sectionD{ background: green; transition: all 1s; }
+		#sectionE{ background: #086A87; transition: all 1s; }
+		#sectionF{ background: #DBA901; transition: all 1s; }
+
+		#titleA{transition: all 1s;}
+		#titleB{transition: all 1s;}
+		#titleC{transition: all 1s;}
+		#titleD{transition: all 1s;}
+		#titleE{transition: all 1s;}
+		#titleF{transition: all 1s;}
+	</style>
+</head>
+<body>
+<header id="header">
+	<div id="logo">room</div>
+	<div id="menu">
+		<ul>
+			<li id="menuA">?</li>
+			<li id="menuB">?</li>
+			<li id="menuC">?</li>
+			<li id="menuD">?</li>
+			<li id="menuE">?</li>
+			<li id="menuF">?</li>
+
+		</ul>
+	</div>
+</header>
+<div class="section" id="sectionA">
+    
+    <img src="./img-01.png" >
+	<h1 id="titleA"></h1>
+
+	
+</div>
+<div class="section" id="sectionB">
+    <img src="./img-04.png" style="width: 200px;margin-left: 550px;">
+	<h1 id="titleB"></h1>
+	 
+</div>
+
+<div class="section" id="sectionC">
+	<h2 id="titleC">nock nock</h1>
+	<img src="./img-13.jpg" style="width: 120px;">
+	
+	
+</div>
+<div class="section" id="sectionD">
+    <img src="./img-05.jpg" style="width: 150px; margin-left: 572px;">
+	<h1 id="titleD">"ㅠ"</h1>
+</div>
+<div class="section" id="sectionE">
+	<h1 id="titleE">WO</h1>
+</div>
+<div class="section" id="sectionF">
+    <img src="./img-06.jpg" style="width: 150px;margin-left: 572px;">
+	<h1 id="titleF"></h1>
+</div>
+<div class="section">
+	<h1 style="color:black; font-size: 1.2em;">copyright&copy;2017.asy</h1>
+</div>
+<script>
+	window.onscroll = function(){
+		console.log(document.body.scrollTop);
+		var scrollH = document.body.scrollTop;
+		if(scrollH > 50){
+			header.style.height = "44px";
+			header.style.position = "fixed";
+			header.style.top = "0px";
+			header.style.zIndex = "9999";
+			menu.style.left = "400px";
+			menu.style.top = "-70px";
+			logo.style.left = "0px";
+			sectionA.style.marginTop = "44px";
+		}else{
+			header.style.height = "300px";
+			header.style.position = "relative";
+			header.style.top = "0px";
+			logo.style.left = "calc(50% - 100px)";
+			menu.style.left = "calc(50% - 350px)";
+			menu.style.top = "80px";
+			sectionA.style.marginTop = "0px";
+
+		}
+
+		if(scrollH > 80){
+			titleA.style.paddingTop = "400px";
+			menuA.style.background = "orange";
+		}else{
+			titleA.style.paddingTop = "280px";
+			menuA.style.background = "white";
+		}
+
+		if(scrollH > 550){
+			titleB.style.paddingTop = "500px";
+			titleB.style.transform = "rotateY(0deg)";
+			menuB.style.background = "orange";
+		}else{
+			titleB.style.paddingTop = "280px";
+			titleB.style.transform =  "rotateY(180deg)";
+			menuB.style.background = "white";
+		}
+
+		if(scrollH > 1000){
+
+			titleC.style.paddingTop = "80px";
+			titleC.style.transform = "rotateY(0deg)";
+			menuC.style.background = "orange";
+		}else{
+			titleC.style.paddingTop = "600px";
+			titleC.style.transform =  "rotateY(180deg)";
+			menuC.style.background = "white";
+		}
+
+		if(scrollH > 1615){
+			sectionD.style.background = "#B40431";
+			titleD.style.color = "black";
+			menuD.style.background = "orange";
+		}else{
+			sectionD.style.background = "#B40486";
+			titleD.style.color = "white";
+			menuD.style.background = "white";
+		}
+
+		if(scrollH > 2200){
+			titleE.style.fontSize = "1.5em";
+			titleE.style.fontWeight = "700";
+			menuE.style.background = "orange";
+		}else{
+			titleE.style.fontSize = "3em";
+			titleE.style.fontWeight = "200";
+			menuE.style.background = "white";
+		}
+
+		if(scrollH > 2700){
+			titleF.style.fontSize = "1.5em";
+			titleF.style.fontWeight = "700";
+			menuF.style.background = "orange";
+		}else{
+			titleF.style.fontSize = "3em";
+			titleF.style.fontWeight = "200";
+			menuF.style.background = "white";
+		}
+
+	}
+</script>
+</body>
